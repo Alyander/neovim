@@ -1,6 +1,14 @@
 return {
   -- Mason: installs and manages external tools like LSP servers
    {
+    "mason-org/mason-lspconfig.nvim",
+    -- opts = {ensure_installed = {"clangd", "jdtls", "rust_analyzer", "lua_ls", "pyright"} },
+    dependencies = {
+        { "mason-org/mason.nvim", opts = {} },
+        "neovim/nvim-lspconfig",
+    },
+},
+   {
         "hrsh7th/nvim-cmp",
   opts = function()
     local cmp = require("cmp")
@@ -36,6 +44,7 @@ return {
       lspconfig.pyright.setup({capabilities = capabilities})
       lspconfig.rust_analyzer.setup({capabilities = capabilities})
       lspconfig.clangd.setup({capabilities = capabilities})
+      lspconfig.jdtls.setup({capabilities = capabilities})
     end
   },
 
