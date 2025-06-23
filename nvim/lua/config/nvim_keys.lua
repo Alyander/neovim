@@ -7,7 +7,6 @@ vim.keymap.set('n', '<leader>dd', "<cmd>:TodoTelescope<cr>")
 vim.keymap.set("n", "<leader>ca", function()
 	require("tiny-code-action").code_action()
 end, { noremap = true, silent = true })
-
 -- Custom Settings
 vim.keymap.set('n', '<leader>w', "<cmd>:w<cr>")
 vim.keymap.set('n', '<leader>e', "<cmd>:NvimTreeToggle<cr>")

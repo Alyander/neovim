@@ -8,7 +8,7 @@ return {
     },
 },
 {
-        {
+{
   'saghen/blink.cmp',
     version = '1.*',    
   -- optional: provides snippets for the snippet source
@@ -19,7 +19,6 @@ return {
   -- build = 'cargo build --release',
   -- If you use nix, you can build from source using latest nightly rust with:
   -- build = 'nix run .#build-plugin',
-
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
   opts = {
@@ -35,7 +34,7 @@ return {
     -- C-k: Toggle signature help (if signature.enabled = true)
     --
     -- See :h blink-cmp-config-keymap for defining your own keymap
-    keymap = { preset = 'default' },
+    keymap = { preset = 'enter',},
 
     appearance = {
       -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
