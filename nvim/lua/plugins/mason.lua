@@ -6,5 +6,6 @@ return {
             ensure_installed = {"clangd", "jdtls", "rust_analyzer", "lua_ls", "pyright"}
         })
     end,
-    dependencies = {"hrsh7th/nvim-cmp", "mason-org/mason-lspconfig.nvim", "jay-babu/mason-nvim-dap.nvim" }
+    dependencies = { "mason-org/mason-lspconfig.nvim", "jay-babu/mason-nvim-dap.nvim" }
+
 }
