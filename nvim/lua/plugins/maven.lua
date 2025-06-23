@@ -6,5 +6,4 @@ return{
       "MunifTanjim/nui.nvim",
    },
    opts = {}, -- options, see default configuration
-   keys = { { "<Leader>M", "<cmd>Maven<cr>", desc = "Maven" } }
 }

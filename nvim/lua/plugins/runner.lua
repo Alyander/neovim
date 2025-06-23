@@ -1,5 +1,7 @@
 return{
     'MarcHamamji/runner.nvim',
+    lazy = true,
+    cmd = {"Runner"},
     dependencies = {
       'nvim-telescope/telescope.nvim',
       dependencies = { 'nvim-lua/plenary.nvim' }

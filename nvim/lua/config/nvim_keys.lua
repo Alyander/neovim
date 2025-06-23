@@ -3,6 +3,8 @@ local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+vim.keymap.set('n', '<leader>dd', "<cmd>:TodoTelescope<cr>")
+
 -- Custom Settings
 vim.keymap.set('n', '<leader>w', "<cmd>:w<cr>")
 vim.keymap.set('n', '<leader>e', "<cmd>:NvimTreeToggle<cr>")
@@ -10,11 +12,27 @@ vim.keymap.set('n', '<leader>fc', "<cmd>:NvimTreeFocus<cr>")
 vim.keymap.set('n', '<leader>t', "<cmd>:tabnew | term<cr>")
 vim.keymap.set('n', '<leader>qq', "<cmd>:q!<cr>")
 vim.keymap.set('t', '<ESC>', "<C-\\><C-n><CR>")
-
+vim.keymap.set('n', '<leader>rr', "<cmd>:Runner<cr>")
 -- dap
 vim.keymap.set('n', '<leader>dk', function() require('dap').continue() end)
 vim.keymap.set('n', '<leader>dl', function() require('dap').run_last() end)
 vim.keymap.set('n', '<leader>b', function() require('dap').toggle_breakpoint() end)
+-- maven
+vim.keymap.set('n', '<leader>m', "<cmd>:Maven<cr>")
+--todo-comments.lua
+vim.keymap.set("n", "]t", function()
+  require("todo-comments").jump_next()
+end, { desc = "Next todo comment" })
+
+vim.keymap.set("n", "[t", function()
+  require("todo-comments").jump_prev()
+end, { desc = "Previous todo comment" })
+
+-- You can also specify a list of valid jump keywords
+
+vim.keymap.set("n", "]t", function()
+  require("todo-comments").jump_next({keywords = { "ERROR", "WARNING" }})
+end, { desc = "Next error/warning todo comment" })
 -- barbar.nvim setting
 local map = vim.api.nvim_set_keymap
 
