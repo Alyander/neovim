@@ -1,3 +1,0 @@
-I want add a 
-    kndndrj/nvim-dbee
-    kndndrj/nvim-projector
