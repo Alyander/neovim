@@ -26,7 +26,6 @@ return {
     -- 'super-tab' for mappings similar to vscode (tab to accept)
     -- 'enter' for enter to accept
     -- 'none' for no mappings
-    --
     -- All presets have the following mappings:
     -- C-space: Open menu or open docs if already open
     -- C-n/C-p or Up/Down: Select next/previous item
@@ -44,7 +43,6 @@ return {
 
     -- (Default) Only show the documentation popup when manually triggered
     completion = { documentation = { auto_show = false } },
-
     -- Default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {

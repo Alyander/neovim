@@ -5,3 +5,4 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 vim.o.cursorline = true -- Highlight the current line
 vim.o.termguicolors = true -- Enable 24-bit RGB colors
+vim.g.loaded_ruby_provider = 0
