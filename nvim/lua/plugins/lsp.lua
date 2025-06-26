@@ -1,12 +1,12 @@
 return {
   -- Mason: installs and manages external tools like LSP servers
-   {
-    "mason-org/mason-lspconfig.nvim",
-    dependencies = {
-        { "mason-org/mason.nvim", opts = {} },
-        "neovim/nvim-lspconfig",
-    },
-},
+--    {
+--     "mason-org/mason-lspconfig.nvim",
+--     dependencies = {
+--         { "mason-org/mason.nvim", opts = {} },
+--         "neovim/nvim-lspconfig",
+--     },
+-- },
 {
 {
   'saghen/blink.cmp',
@@ -71,6 +71,7 @@ return {
       lspconfig.rust_analyzer.setup({capabilities = capabilities})
       lspconfig.clangd.setup({capabilities = capabilities})
       lspconfig.jdtls.setup({capabilities = capabilities})
+      lspconfig.bashls.setup({capabilities = capabilities})
     end
   },
 

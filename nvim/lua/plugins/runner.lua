@@ -15,7 +15,17 @@ return{
                 width = 80,         -- width of window when position is left or right
                 height = 10,        -- height of window when position is top or bottom
 
-                handlers = {} -- discussed in the next section
+                handlers = {
+                cpp = function(bufnr)
+                    -- local exec = os.getenv("executable") or vim.fn.input("Enter executable: ")
+                    local settings = require("nvim.settings")
+                    local exec = settings.executable
+                    local mode = settings.mode
+                    if mode == "release" then vim.cmd("!cd build && cmake .. && make -j4 && ./" .. exec)
+                    elseif mode == "debug" then vim.cmd("!cd build && cmake -DCMAKE_BUILD_TYPE=Debug .. && make -j4")
+                    end
+                end
+            } -- discussed in the next section
         })
     end
   }

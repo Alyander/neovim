@@ -66,7 +66,7 @@ return {
           dapui.close()
         end
       end,
-    },
-    {"jay-babu/mason-nvim-dap.nvim", opts={ensure_installed = { "python", "java-debug-adapter", "codelldb" }}},
+     },
+    -- {"jay-babu/mason-nvim-dap.nvim", opts={ensure_installed = { "python", "java-debug-adapter", "codelldb" }}},
     {"theHamsta/nvim-dap-virtual-text", opts={}}
 }

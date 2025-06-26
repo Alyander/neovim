@@ -10,7 +10,8 @@ dap.configurations.c = {
     type = "gdb",
     request = "launch",
     program = function()
-      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+        exec=require("nvim.settings").executable
+      return vim.fn.getcwd() .. '/build/' .. exec 
     end,
     cwd = "${workspaceFolder}",
     stopAtBeginningOfMainSubprogram = false,
